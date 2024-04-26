@@ -17,6 +17,21 @@ body {
   /* flex-direction: row; valor por default */
   /* flex-direction: column; ordena todo de arriba a abajo */
   /* flex-direction: column-reverse; hace lo mismo que el column solo que lo que va abajo lo pone arriba por lo que si es 1, 2, 3, 4. Ahora irá 4, 3, 2, 1. De abajo hacia arriba o arria a abajo */
+  /* justify-content: start; valor predeterminado */
+  /* justify-content: end; alinea los items hacia la derecha */
+  /* justify-content: center; alinea los items al centro */
+  /* justify-content: space-around; distribuye los items asignandoles un espacio alrededor de cada item */
+  /* justify-content: space-between; Distrubuye un espacioproporcional entre los items */
+  /* justify-content: space-evenly; Distribuye los items y los espacios son iguales */
+  height: 500px;/* Damos altura para probar aling-item */
+  /* align-items: flex-start; Alinea hacia arriba */
+  /* align-items: flex-end; Alinea hacia abajo */
+  /* align-items: center; Alinea al centro */
+  /* align-items: stretch; Se debe comentar la altura del item. Crecen en la altura de los elementos en el espacio disponible */
+  align-items: baseline;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
 }
 .item {
   width: 100px;
@@ -28,3 +43,40 @@ body {
   padding-top: 32px;
   border: 1px solid black;
 }
+/* Vaos a usar pseudoclases para seleccionar los items individualmente */
+
+/* 
+
+Reto
+
+  1. Cada item debe tener un tamaño de fuente distinto
+  2. Cada item debe tener un padding top distinto
+  3. Cada item debe tener un alto distinto. Que no exceda el alto del contenedor
+
+*/
+
+./* item:nth-child(1) {
+  background-color: blue;
+  font-size: 70px;
+  padding-top: 10px;
+  height: 180px;
+}
+.item:nth-child(2) {
+  background-color: red;
+  font-size: 50px;
+  padding-top: 100px;
+  height: 160px;
+}
+.item:nth-child(3) {
+  background-color: chartreuse;
+  font-size: 200px;
+  padding-top: 90px;
+  height: 280px;
+}
+.item:nth-child(4) {
+  background-color: blueviolet;
+  font-size: 100px;
+  padding-top: 100px;
+  height: 200px;
+}
+ */
