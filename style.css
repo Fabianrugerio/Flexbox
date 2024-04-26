@@ -10,7 +10,13 @@ body {
 }
 .container {
   background-color: cyan;
+  /* display: flex; ajussta el ancho al espacio disponible y el inline-flex ajusta el anvho al espacio de los contenidos (ancho = main-size)*/
+  /* display: inline-flex; */
   display: flex;
+  /* flex-direction: row-reverse; cambia el orden en que se lee */
+  /* flex-direction: row; valor por default */
+  /* flex-direction: column; ordena todo de arriba a abajo */
+  /* flex-direction: column-reverse; hace lo mismo que el column solo que lo que va abajo lo pone arriba por lo que si es 1, 2, 3, 4. Ahora irá 4, 3, 2, 1. De abajo hacia arriba o arria a abajo */
 }
 .item {
   width: 100px;
