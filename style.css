@@ -8,11 +8,11 @@ body {
   background-color: aliceblue;
   font-family: sans-serif;
 }
-.container {
-  background-color: cyan;
+/* .container 
+  background-color: cyan; */
   /* display: flex; ajussta el ancho al espacio disponible y el inline-flex ajusta el anvho al espacio de los contenidos (ancho = main-size)*/
   /* display: inline-flex; */
-  display: flex;
+  /* display: flex; */
   /* flex-direction: row-reverse; cambia el orden en que se lee */
   /* flex-direction: row; valor por default */
   /* flex-direction: column; ordena todo de arriba a abajo */
@@ -23,19 +23,41 @@ body {
   /* justify-content: space-around; distribuye los items asignandoles un espacio alrededor de cada item */
   /* justify-content: space-between; Distrubuye un espacioproporcional entre los items */
   /* justify-content: space-evenly; Distribuye los items y los espacios son iguales */
-  height: 500px;/* Damos altura para probar aling-item */
+  /* height: 500px Damos altura para probar aling-item */
   /* align-items: flex-start; Alinea hacia arriba */
   /* align-items: flex-end; Alinea hacia abajo */
   /* align-items: center; Alinea al centro */
   /* align-items: stretch; Se debe comentar la altura del item. Crecen en la altura de los elementos en el espacio disponible */
-  align-items: baseline;
+  /* align-items: baseline;
   align-items: center;
   justify-content: center;
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; */
+.container {
+  width: 325px;
+  height: 500px;
+
+  /* Flex-warp */
+
+  display: flex;
+  flex-wrap: nowrap;/* valor por default. Esto hace que los items se austesn al espacio disponivle, sin dar salto de linea */
+  flex-wrap: wrap; /* esto dara saltos de linea en los items cuando no quepan en el espacio disponible. Si el contenedor no tiene alto definido, se ajustara automaticamente */
+  background-color: lightblue;
+
+  /* Aling-content  ESta propiedad trabaja cuando hay multiples lineas */
+
+  align-content: normal; /* Valor por default */
+  align-content: start; /* Ajusta las lineas al inicio del eje transversal, osea que las alinea hacea arriba */
+  align-content: flex-end; /* Ajusta las lineas al final del eje transversal, alinea hacia abajo */
+  align-content: center; /* Ajusta las lineas al centro del eje transversal, las alinea al centro */
+  align-content: space-around; /* Distribuye el espacio al rededor de las lineas (arriba y abajo) */
+  align-content: space-between;  /* Distribuye el espacio entre las lineas. Sin considerar el contenedor */
+  /* align-content: space-evenly; */ /* Distrubye el espacio proporcionalmente entre las lineas considerando el contenedor */
+  /* align-content: stretch;  */ /* Esto va acrecer la altura de los items en el espacio disponible del eje transversal */
+  justify-content: space-between;
 }
 .item {
   width: 100px;
-  height: 100px;
+  height: 100px; 
   background-color: coral;
   text-align: center;
   font-size: 24px;
@@ -55,7 +77,7 @@ Reto
 
 */
 
-./* item:nth-child(1) {
+/* .item:nth-child(1) {
   background-color: blue;
   font-size: 70px;
   padding-top: 10px;
