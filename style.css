@@ -32,30 +32,30 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row-reverse; */
-.container {
+/* .container {
   width: 325px;
-  height: 500px;
+  height: 500px; */
 
   /* Flex-warp */
 
-  display: flex;
-  flex-wrap: nowrap;/* valor por default. Esto hace que los items se austesn al espacio disponivle, sin dar salto de linea */
-  flex-wrap: wrap; /* esto dara saltos de linea en los items cuando no quepan en el espacio disponible. Si el contenedor no tiene alto definido, se ajustara automaticamente */
-  background-color: lightblue;
-
+  /* display: flex;
+  flex-wrap: nowrap; *//* valor por default. Esto hace que los items se austesn al espacio disponivle, sin dar salto de linea */
+ /*  flex-wrap: wrap; */ /* esto dara saltos de linea en los items cuando no quepan en el espacio disponible. Si el contenedor no tiene alto definido, se ajustara automaticamente */
+ /*  background-color: lightblue;
+ */
   /* Aling-content  ESta propiedad trabaja cuando hay multiples lineas */
 
-  align-content: normal; /* Valor por default */
-  align-content: start; /* Ajusta las lineas al inicio del eje transversal, osea que las alinea hacea arriba */
-  align-content: flex-end; /* Ajusta las lineas al final del eje transversal, alinea hacia abajo */
-  align-content: center; /* Ajusta las lineas al centro del eje transversal, las alinea al centro */
-  align-content: space-around; /* Distribuye el espacio al rededor de las lineas (arriba y abajo) */
-  align-content: space-between;  /* Distribuye el espacio entre las lineas. Sin considerar el contenedor */
+ /*  align-content: normal; */ /* Valor por default */
+  /* align-content: start; */ /* Ajusta las lineas al inicio del eje transversal, osea que las alinea hacea arriba */
+  /* align-content: flex-end; */ /* Ajusta las lineas al final del eje transversal, alinea hacia abajo */
+  /* align-content: center;  *//* Ajusta las lineas al centro del eje transversal, las alinea al centro */
+ /*  align-content: space-around; */ /* Distribuye el espacio al rededor de las lineas (arriba y abajo) */
+  /* align-content: space-between; */  /* Distribuye el espacio entre las lineas. Sin considerar el contenedor */
   /* align-content: space-evenly; */ /* Distrubye el espacio proporcionalmente entre las lineas considerando el contenedor */
   /* align-content: stretch;  */ /* Esto va acrecer la altura de los items en el espacio disponible del eje transversal */
-  justify-content: space-between;
-}
-.item {
+  /* justify-content: space-between; */
+/* } */
+/* .item {
   width: 100px;
   height: 100px; 
   background-color: coral;
@@ -64,7 +64,7 @@ body {
   font-weight: bold;
   padding-top: 32px;
   border: 1px solid black;
-}
+} */
 /* Vaos a usar pseudoclases para seleccionar los items individualmente */
 
 /* 
@@ -102,3 +102,78 @@ Reto
   height: 200px;
 }
  */
+
+ /* 
+ 
+ Flex shrink
+
+ Es una propiedad que va a ajustar el factor de encogimiento o estrechamiento (encojimiento, apachurramiento, aplastamiento) de los elementos (items)
+
+ flex-shrink:1 -> Este es el valor por default. Recibe valores nùmericos: 1, 2, 3, 4, ... Entre mas grande sea el nùmero; mayor serà su factor de decrecimiento
+ 
+ */
+
+ /* .item {
+  flex-basis: 350px; */ /* ancho, flex-direction:row */
+  /* flex-shrink: 1; */ /* este es el valor por default */
+
+ /*  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1 px solid white;
+  background-color: crimson;
+ } */
+
+ /* crear clases para los items */
+
+ /* 
+.tron1 {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+.tron2 {
+  flex-shrink: 2;
+  flex-grow: 2;
+}
+.tron3 {
+  flex-shrink: 3;
+  flex-grow: 3;
+}
+.tron4 {
+  flex-shrink: 4;
+  flex-grow: 4;
+}  */
+
+/* 
+
+gap -> Espacio entre los elementos
+
+Recibe valores en números con unidades relativas o absolutas
+
+Esta propiedad se pasa al contenedor
+
+*/
+
+
+.container {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 24px; */ /* Espacio entre los elementos */
+  /* gap: 4rem; */ /* Unidades absolutas. px o relativas em o rem */
+  column-gap: 24px; /* Espacio entre los elemtentos en la vertical */
+  row-gap: 32px; /* Espacio entre los elemtentos en la horizaontal */
+  gap: 10px 32px;/* El primero es para el espaco horizontal y el segundo al espacio vertical */
+  background-color: lightblue;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  
+  background-color: lightcoral;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid black;
+}
