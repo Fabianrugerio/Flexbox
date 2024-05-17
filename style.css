@@ -156,15 +156,18 @@ Esta propiedad se pasa al contenedor
 
 
 .container {
-  width: 500px;
+/*   width: 500px; */
   display: flex;
-  flex-wrap: wrap;
+  height: 400px;
+ /*  flex-wrap: wrap; */
   /* gap: 24px; */ /* Espacio entre los elementos */
   /* gap: 4rem; */ /* Unidades absolutas. px o relativas em o rem */
-  column-gap: 24px; /* Espacio entre los elemtentos en la vertical */
-  row-gap: 32px; /* Espacio entre los elemtentos en la horizaontal */
-  gap: 10px 32px;/* El primero es para el espaco horizontal y el segundo al espacio vertical */
+  /* column-gap: 24px; */ /* Espacio entre los elemtentos en la vertical */
+  /* row-gap: 32px;  *//* Espacio entre los elemtentos en la horizaontal */
+  /* gap: 10px 32px; *//* El primero es para el espaco horizontal y el segundo al espacio vertical */
   background-color: lightblue;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .item {
@@ -177,3 +180,15 @@ Esta propiedad se pasa al contenedor
   font-weight: bold;
   border: 1px solid black;
 }
+
+/* 
+
+aling-delf -> Se pasa a uno o varios elementos en particulos
+
+Va a alinear en el eje transversal a ese elemento unicamente. Y sobreescribe la propiedad de aling-items y su valor si se ha declarado en el contenedor
+
+Recibe los mismos valores que aling-items
+
+  start, ent, center, stretch, baseline
+
+*/
